@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CHUCS</title>
+	<!-- 裝置畫面更動 -->
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!-- title圖片 -->
+	<link rel="icon" type="image/x-icon" href="assets/images/icon.png" />
+	<!-- jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<!-- 我的css -->
+	<link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container text-center">
+			<!-- logo -->
+			<a class="navbar-brand" href="#">CHUCS</a>
+		
+			<!-- 手機版 -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- 電腦版 -->
+			<div class="collapse navbar-collapse" id="linkbar">
+				<!-- 導覽列 -->
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="解題記錄.html">解題記錄</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="教學-編譯器.html">教學</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">標籤</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<nav class="navbar position-fixed top-10 start-10 left_navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="javascript:void(0)" onclick="scrollToTop()">開頭</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題目敘述">題目</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Input">Input</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Output">Output</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#範例輸入輸出">Sample</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題意">題意</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#思路">思路</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#程式碼">程式碼</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-8 fade-in-out">
+				<div id="UVa 10986 Sending email">
+					<div class="title_dis">
+						<h1>104 - Arbitrage</h1>
+						<h6>time limit per test: 3 second</h6>
+					</div>
+				</div>
+				<div>
+					<a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=40">題目位置</a>
+				</div>
+				<div id="題目敘述">
+					<div class="dis">
+						<h2>題目敘述:</h2>
+					</div>
+					<h6>
+						The use of computers in the finance industry has been marked with controversy lately as programmed
+						trading — designed to take advantage of extremely small fluctuations in prices — has been outlawed
+						at many Wall Street firms. The ethics of computer programming is a fledgling field with many thorny
+						issues.
+					</h6>
+					<p></p>
+					<h6>
+						Arbitrage is the trading of one currency for another with the hopes of taking advantage of small
+						differences in conversion rates among several currencies in order to achieve a profit. For example, if
+						$<span class="keyword">1.00</span> in U.S. currency buys <span class="keyword">0.7</span> British pounds currency, £<span class="keyword">1</span> in British currency buys <span class="keyword">9.5</span> French francs,
+						and <span class="keyword">1</span> French franc buys <span class="keyword">0.16</span> in U.S. dollars, then an arbitrage trader can start with $<span class="keyword">1.00</span> and earn
+						<span class="keyword">1</span> × <span class="keyword">0.7</span> × <span class="keyword">9.5</span> × <span class="keyword">0.16</span> = <span class="keyword">1.064</span> dollars thus earning a profit of <span class="keyword">6.4</span> percent.
+					</h6>
+					<p></p>
+					<h6>
+						You will write a program that determines whether a sequence of currency exchanges can yield a
+						profit as described above.
+						To result in successful arbitrage, a sequence of exchanges must begin and end with the same currency,
+						but any starting currency may be considered.
+					</h6>
+				</div>
+				<div id="Input">
+					<div class="dis">
+						<h2>Input:</h2>
+					</div>
+					<h6>
+						The use of computers in the finance industry has been marked with controversy lately as programmed
+						trading — designed to take advantage of extremely small fluctuations in prices — has been outlawed
+						at many Wall Street firms. The ethics of computer programming is a fledgling field with many thorny
+						issues.
+					</h6>
+					<p></p>
+					<h6>
+						Each table is preceded by an integer n on a line by itself giving the dimensions of the table. The
+						maximum dimension is 20; the minimum dimension is 2.
+					</h6>
+					<p></p>
+					<h6>
+						The table then follows in row major order but with the diagonal elements of the table missing (these
+						are assumed to have value 1.0). Thus the first row of the table represents the conversion rates between
+						country 1 and n − 1 other countries, i.e., the amount of currency of country i (2 ≤ i ≤ n) that can be
+						purchased with one unit of the currency of country 1.
+					</h6>
+					<p></p>
+					<h6>
+						Thus each table consists of n + 1 lines in the input file: 1 line containing n and n lines representing
+						the conversion table.
+					</h6>
+					
+				</div>
+				<div id="Output">
+					<div class="dis">
+						<h2>Output:</h2>
+					</div>
+					<h6>
+						For each table in the input file you must determine whether a sequence of exchanges exists that results
+						in a profit of more than 1 percent (0.01). If a sequence exists you must print the sequence of exchanges
+						that results in a profit. If there is more than one sequence that results in a profit of more than 1 percent
+						you must print a sequence of minimal length, i.e., one of the sequences that uses the fewest exchanges
+						of currencies to yield a profit.
+					</h6>
+					<p></p>
+					<h6>
+						Because the IRS (United States Internal Revenue Service) notices lengthy transaction sequences,
+						all profiting sequences must consist of n or fewer transactions where n is the dimension of the table
+						giving conversion rates. The sequence 1 2 1 represents two conversions.
+					</h6>
+					<p></p>
+					<h6>
+						If a profiting sequence exists you must print the sequence of exchanges that results in a profit.
+						The sequence is printed as a sequence of integers with the integer i representing the i-th line of the
+						conversion table (country i). The first integer in the sequence is the country from which the profiting
+						sequence starts. This integer also ends the sequence.
+					<p></p>
+					<h6>
+						If no profiting sequence of n or fewer transactions exists, then the line
+						<span class="keyword">no arbitrage sequence</span> exists
+						should be printed.
+					</h6>
+				</div>
+				<div id="範例輸入輸出">
+					<div class="dis">
+						<h2>Sample input:</h2>
+					</div>
+					<script src="https://gist.github.com/92daniel/afc1a48739a73c167be164f0f4c5fb86.js"></script>
+					<div class="dis">
+						<h2>Sample output:</h2>
+					</div>
+					<script src="https://gist.github.com/92daniel/27e3e53aec1775a20edbd179d352a153.js"></script>
+				</div>
+				<hr />
+				<div id="題意">
+					<div class="dis">
+						<h2>題意:</h2>
+					</div>
+					<h6></h6>
+				</div>
+				<div id="思路">
+					<div class="dis">
+						<h2>思路:</h2>
+					</div>
+					<ul>
+					<li></li>
+					</ul>
+					<p>
+				</div>
+				<!-- 程式碼 -->
+				<div id="程式碼">
+				<script src="https://gist.github.com/92daniel/b085c78e1b895f903d9039c80cca52e5.js"></script>
+				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
+		</div>
+	</div>
+	<footer class="bg-light py-4 mt-auto">
+		<div class="container px-5">
+			<div class="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/07/22更新</div></div>
+				<div class="col-auto"><div class="small m-0 text-dark">- by hao</div></div>
+			</div>
+		</div>
+	</footer>
+</body>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</html>

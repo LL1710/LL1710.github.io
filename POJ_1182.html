@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CHUCS</title>
+	<!-- 裝置畫面更動 -->
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!-- title圖片 -->
+	<link rel="icon" type="image/x-icon" href="assets/images/icon.png" />
+	<!-- jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<!-- 我的css -->
+	<link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container text-center">
+			<!-- logo -->
+			<a class="navbar-brand" href="#">CHUCS</a>
+		
+			<!-- 手機版 -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- 電腦版 -->
+			<div class="collapse navbar-collapse" id="linkbar">
+				<!-- 導覽列 -->
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="解題記錄.html">解題記錄</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="教學-編譯器.html">教學</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">標籤</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<nav class="navbar position-fixed top-10 start-10 left_navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="javascript:void(0)" onclick="scrollToTop()">開頭</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題目敘述">題目</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Input">Input</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Output">Output</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#範例輸入輸出">Sample</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題意">題意</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#思路">思路</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#程式碼">程式碼</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-8 fade-in-out">
+				<div id="UVa 10986 Sending email">
+					<div class="title_dis">
+						<h1>POJ_1182</h1>
+					</div>
+				</div>
+				<div>
+					<a href="http://poj.org/problem?id=1182">題目位置</a>
+				</div>
+				<div id="題目敘述">
+					<div class="dis">
+						<h2>題目敘述:</h2>
+					</div>
+					<h6>
+						动物王国中有三类动物A,B,C，这三类动物的食物链构成了有趣的环形。A吃B， B吃C，C吃A。
+						现有N个动物，以1－N编号。每个动物都是A,B,C中的一种，但是我们并不知道它到底是哪一种。
+						有人用两种说法对这N个动物所构成的食物链关系进行描述：
+						第一种说法是"1 X Y"，表示X和Y是同类。
+						第二种说法是"2 X Y"，表示X吃Y。
+						此人对N个动物，用上述两种说法，一句接一句地说出K句话，这K句话有的是真的，有的是假的。当一句话满足下列三条之一时，这句话就是假话，否则就是真话。
+						1） 当前的话与前面的某些真的话冲突，就是假话；
+						2） 当前的话中X或Y比N大，就是假话；
+						3） 当前的话表示X吃X，就是假话。
+						你的任务是根据给定的N（1 &le; N &le; 50,000）和K句话（0 &le; K &le; 100,000），输出假话的总数。
+					</h6>
+				</div>
+				<div id="Input">
+					<div class="dis">
+						<h2>Input:</h2>
+					</div>
+					<p></p>
+					<h6>
+						第一行是两个整数N和K，以一个空格分隔。
+						以下K行每行是三个正整数 D，X，Y，两数之间用一个空格隔开，其中D表示说法的种类。
+						若D=1，则表示X和Y是同类。
+						若D=2，则表示X吃Y。
+					</h6>
+				</div>
+				<div id="Output">
+					<div class="dis">
+						<h2>Output:</h2>
+					</div>
+					<h6>
+						只有一个整数，表示假话的数目。
+					</h6>
+				</div>
+				<div id="範例輸入輸出">
+					<div class="dis">
+						<h2>Sample input:</h2>
+					</div>
+					<script src="https://gist.github.com/92daniel/d3daa1e4d690546e351f41d8b30f64a6.js"></script>
+					<div class="dis">
+						<h2>Sample output:</h2>
+					</div>
+					<script src="https://gist.github.com/92daniel/b8cd699e088d56fc7d98d743d5095c32.js"></script>
+				</div>
+				<hr />
+				<div id="題意">
+					<div class="dis">
+						<h2>題意:</h2>
+					</div>
+					<h6>食物鏈關係:A吃B B吃C C吃A</h6>
+					<h6>題目要求給我幾個關係找出有幾個不符合前面已經給過的關係</h6>
+					<h6>第一種:自己吃自己</h6>
+					<h6>第二種:x或x &lt; N</h6>
+					<h6>第三種:跟前面有衝突，例如:A吃B B吃C A吃B(不符合食物鏈關係)</h6>
+				</div>
+				<div id="思路">
+					<div class="dis">
+						<h2>思路:</h2>
+					</div>
+					<ul>
+					<li><h6>使用dsu</h6></li>
+					<li><h6>首先把ABC三種動物區分A = dsu[1~N] B = dsu[N+1~2*N] C = dsu[2*N+1~3*n]</h6></li>
+					<li><h6>當x跟y是同類union X-A與Y-A、X-B與Y-B、X-C與Y-C群組 並檢查是否X-A與Y-B的群組已存在或者X-A與Y-C的群組已存在</h6></li>
+					<li><h6>當x跟y是不是同類union X-A與Y-B、X-B與Y-C、X-C與Y-A的群組 檢查是否X-A與Y-A的群組已存在或者X-A與Y-C的群組已存在</h6></li>
+					</ul>
+					<p>
+				</div>
+				<!-- 程式碼 -->
+				<div id="程式碼">
+				<script src="https://gist.github.com/92daniel/f2198f24ef4771494d7ddcf35b3aee04.js"></script>
+				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
+		</div>
+	</div>
+	<footer class="bg-light py-4 mt-auto">
+		<div class="container px-5">
+			<div class="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/07/23更新</div></div>
+				<div class="col-auto"><div class="small m-0 text-dark">- by hao</div></div>
+			</div>
+		</div>
+	</footer>
+</body>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</html>

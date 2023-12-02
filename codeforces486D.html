@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CHUCS</title>
+	<!-- 裝置畫面更動 -->
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!-- title圖片 -->
+	<link rel="icon" type="image/x-icon" href="assets/images/icon.png" />
+	<!-- jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<!-- 我的css -->
+	<link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container text-center">
+			<!-- logo -->
+			<a class="navbar-brand" href="#">CHUCS</a>
+		
+			<!-- 手機版 -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- 電腦版 -->
+			<div class="collapse navbar-collapse" id="linkbar">
+				<!-- 導覽列 -->
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="解題記錄.html">解題記錄</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="教學-編譯器.html">教學</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">標籤</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<nav class="navbar position-fixed top-10 start-10 left_navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="javascript:void(0)" onclick="scrollToTop()">開頭</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題目敘述">題目</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Input">Input</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#Output">Output</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#題意">題意</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#思路">思路</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#程式碼">程式碼</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-8 fade-in-out">
+				<div id="UVa 10986 Sending email">
+					<div class="title_dis">
+						<h1>D. Valid Sets</h1>
+						<h6>time limit per test: 1 second</h6>
+						<h6>memory limit per test: 256 megabytes</h6>
+					</div>
+				</div>
+				<div>
+					<a href="https://codeforces.com/contest/486/problem/D">題目位置</a>
+				</div>
+				<div id="題目敘述">
+					<div class="dis">
+						<h2>題目敘述:</h2>
+					</div>
+					<div><p>As you know, an undirected connected graph with <span class="tex-span"><i>n</i></span> nodes and <span class="tex-span"><i>n</i> - 1</span> edges is called a <span class="tex-font-style-underline">tree</span>. You are given an integer <span class="tex-span"><i>d</i></span> and a tree consisting of <span class="tex-span"><i>n</i></span> nodes. Each node <span class="tex-span"><i>i</i></span> has a value <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> associated with it.</p><p>We call a set <span class="tex-span"><i>S</i></span> of tree nodes <span class="tex-font-style-underline">valid</span> if following conditions are satisfied:</p><ol><li> <span class="tex-span"><i>S</i></span> is non-empty.</li><li> <span class="tex-span"><i>S</i></span> is connected. In other words, if nodes <span class="tex-span"><i>u</i></span> and <span class="tex-span"><i>v</i></span> are in <span class="tex-span"><i>S</i></span>, then all nodes lying on the simple path between <span class="tex-span"><i>u</i></span> and <span class="tex-span"><i>v</i></span> should also be presented in <span class="tex-span"><i>S</i></span>.</li><li> <img align="middle" class="tex-formula" src="https://espresso.codeforces.com/5acd8cc645f5fece13f02cc0731a39d266d64d5d.png" style="max-width: 100.0%;max-height: 100.0%;">.</li></ol><p>Your task is to count the number of valid sets. Since the result can be very large, you must print its remainder modulo <span class="tex-span">1000000007</span> (<span class="tex-span">10<sup class="upper-index">9</sup> + 7</span>).</p></div>
+				</div>
+				<div id="Input">
+					<div class="dis">
+						<h2>Input:</h2>
+					</div>
+					<div class="input-specification"><p>The first line contains two space-separated integers <span class="tex-span"><i>d</i></span> (<span class="tex-span">0 ≤ <i>d</i> ≤ 2000</span>) and <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 2000</span>).</p><p>The second line contains <span class="tex-span"><i>n</i></span> space-separated positive integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span>(<span class="tex-span">1 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ 2000</span>).</p><p>Then the next <span class="tex-span"><i>n</i> - 1</span> line each contain pair of integers <span class="tex-span"><i>u</i></span> and <span class="tex-span"><i>v</i></span> (<span class="tex-span">1 ≤ <i>u</i>, <i>v</i> ≤ <i>n</i></span>) denoting that there is an edge between <span class="tex-span"><i>u</i></span> and <span class="tex-span"><i>v</i></span>. It is guaranteed that these edges form a tree.</p></div>
+				</div>
+				<div id="Output">
+					<div class="dis">
+						<h2>Output:</h2>
+					</div>
+					<div class="output-specification"><p>Print the number of valid sets modulo <span class="tex-span">1000000007</span>.</p></div>
+				</div>
+				<hr />
+				<div id="題意">
+					<div class="dis">
+						<h2>題意:</h2>
+					</div>
+					<h6>給我一個n個節點的無向樹，求相鄰(節點成本最大-節點成本最小) <= d的所有集合，ans%1e9+7</h6>
+				</div>
+				<div id="思路">
+					<div class="dis">
+						<h2>思路:</h2>
+					</div>
+					<ul>
+					<li></li>
+					</ul>
+					<p>
+				</div>
+				<!-- 程式碼 -->
+				<div id="程式碼">
+				<script src="https://gist.github.com/92daniel/37908bc72d44b8f64b6da3b1e13816e1.js"></script>
+				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
+		</div>
+	</div>
+	<footer class="bg-light py-4 mt-auto">
+		<div class="container px-5">
+			<div class="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/07/21更新</div></div>
+				<div class="col-auto"><div class="small m-0 text-dark">- by hao</div></div>
+			</div>
+		</div>
+	</footer>
+</body>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</html>
+<!-- 淡入淡出效果 
+<div class="fade-in-out">這是淡入淡出效果的範例</div>
+-->
+<!-- 平移效果 
+<div class="slide-in">這是平移效果的範例</div>
+-->
+<!-- 縮放效果 
+<div class="scale-in">這是縮放效果的範例</div>
+-->
+<!-- 旋轉效果 
+<div class="rotate">這是旋轉效果的範例</div>
+-->
+<!-- 彈跳效果 
+<div class="bounce">這是彈跳效果的範例</div>
+-->
+<!-- 滑動效果 
+<div class="slide-down">這是滑動效果的範例</div>
+-->

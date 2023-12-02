@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CHUCS</title>
+	<!-- 裝置畫面更動 -->
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!-- title圖片 -->
+	<link rel="icon" type="image/x-icon" href="assets/images/icon.png" />
+	<!-- jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<!-- 我的css -->
+	<link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container text-center">
+			<a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+				<img src="assets/images/8201371_menu_list_order_ui_checklist_icon.png" alt="Logo" width="37" height="37">
+			</a>
+			<!-- logo -->
+			<a class="navbar-brand" href="#">CHUCS</a>
+		
+			<!-- 手機版 -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- 電腦版 -->
+			<div class="collapse navbar-collapse" id="linkbar">
+				<!-- 導覽列 -->
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="解題記錄.html">解題記錄</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="教學-編譯器.html">教學</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">標籤</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+	  <div class="offcanvas-header">
+		<h5 class="offcanvas-title" id="offcanvasExampleLabel">章節</h5>
+		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	  </div>
+	  <div class="offcanvas-body">
+		  <ul class="navbar-nav">
+			<li><a class="dropdown-item" href="教學-編譯器.html">第0次課程-編譯器</a></li>
+			<li><a class="dropdown-item" href="教學-基礎語法.html">第1次課程-基礎語法</a></li>
+			<li><a class="dropdown-item" href="教學-基礎語法2.html">第2次課程-迴圈</a></li>
+			<li><a class="dropdown-item" href="教學-基礎語法3.html">第3次課程-陣列、字串</a></li>
+			<li><a class="dropdown-item" href="教學-基礎語法4.html">第4次課程-標頭黨、函式、struct</a></li>
+			<li><a class="dropdown-item" href="教學-複習1-4.html">第5次課程-複習1~4</a></li>
+			<li><a class="dropdown-item" href="教學-排序向量.html">第6次課程-排序向量</a></li>
+		  </ul>
+	  </div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-1">
+				<nav class="navbar position-fixed top-10 start-10 left_navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="javascript:void(0)" onclick="scrollToTop()">開頭</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#標頭黨">標頭黨</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#函式">函式</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#struct">struct</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#練習1">練習1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#練習2">練習2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#練習3">練習3</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link special animated-text" href="#練習4">練習4</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-10 fade-in-out">
+				<div id="標頭黨">
+					<div class="title_dis">
+						<h1>標頭黨</h1>
+						<hr>
+						<ul>
+							<li><h6>萬用標頭黨</h6></li>
+							<script src="https://gist.github.com/92daniel/7f7cd925753af80e0dc1c09de48de843.js"></script>
+							<li>cstdlib</li>
+							<ul>
+								<li>abs(x) : 取int x絕對值</li>
+								<li>llabs(x) : 取long long x絕對值</li>
+								<script src="https://gist.github.com/92daniel/32478d25f7ad152f785563690bc2f385.js"></script>
+							</ul>
+							<li>cmath</li>
+							<ul>
+								<li>fabs(x) : 取浮點數x絕對值</li>
+								<li>fmod(x, y) : 浮點數x跟y取餘數</li>
+								<li>pow(x, y) : x的y次方</li>
+								<li>sqrt(x) : x開根號</li>
+								<li>ceil(x): x無條件進位</li>
+								<li>floor(x): x無條件捨去</li>
+								<li>round(x): x四捨五入</li>
+								<span class="keyword">注意 !! 以上幾個出來的值都是浮點數</span>
+							</ul>
+						</ul>
+					</div>
+					<div class = "dis" id="函式">
+						<h1>函式</h1>
+						<hr>
+						<h6>函式分成有回傳值跟沒有回傳值</h6>
+						<ul>
+							<li>有回傳值</li>
+								<h6>語法 : 資料型態 函式名稱(傳入的參數)</h6>
+								<script src="https://gist.github.com/92daniel/7a73ec4f2e0986b4d84f5627d791e249.js"></script>
+								<span class="keyword">注意 !! 一定要return</span>
+							<li>無回傳值</li>
+								<h6>語法 : void 函式名稱(傳入的參數)</h6>
+								<script src="https://gist.github.com/92daniel/6aabcab9effac1c94374a72e0b19854a.js"></script>
+								<span class="keyword">注意 !! 不能回傳值，但是可以用return;結束函式</span>
+						</ul>
+						<h6>遞迴 : 不斷呼叫自己的函式</h6>
+						<script src="https://gist.github.com/92daniel/b0d8305eb152e76c7a5dd7232e08ad94.js"></script>
+					</div>
+					<div class = "dis" id="struct">
+						<h1>struct</h1>
+						<hr>
+						<h6>可以使用一個變數來表達多個資料型態</h6>
+						<ul>
+							<h6>語法</h6>
+							<script src="https://gist.github.com/92daniel/79c66211c4efc32e41dbd889f163310f.js"></script>
+							<h6>範例</h6>
+							<script src="https://gist.github.com/92daniel/2958acc9127444f4fe730cd3155c557a.js"></script>
+						</ul>
+					</div>
+					<div class = "dis" id="練習1">
+						<h1>練習1</h1>
+						<hr>
+						<h2>題目敘述:</h2>
+						<ul>
+							<p><img src="assets/images/4-1範例.png" width="500"></p>
+							<h6>輸入一個整數，輸出費氏數列第n個位子的值</h6>
+						</ul>
+						<p></p>
+						<h2>Input:</h2>
+						<ul>
+							<h6>第一行包含一個整數n，n 小於 20</h6>
+						</ul>
+						<p></p>
+						<h2>Output:</h2>
+						<ul>
+							<h6>參考範例輸出</h6>
+						</ul>
+						<a href="javascript:void(0);" onclick="toggleContent('1');">參考程式碼</a>
+						<div id="hiddenContent1" style="display: none;">
+							<script src="https://gist.github.com/92daniel/5f33d82559ec1c938567a7e2b61911ef.js"></script>
+						</div>
+						<p></p>
+						<h2>範例輸出</h2>
+						<p><img src="assets/images/4-1.png" width="500"></p>
+					</div>
+					<div class = "dis" id="練習2">
+						<h1>練習2</h1>
+						<hr>
+						<h2>題目敘述:</h2>
+						<ul>
+							<h6>輸入兩個整數a, b，輸出兩個數字的最大公因數</h6>
+						</ul>
+						<p></p>
+						<h2>Input:</h2>
+						<ul>
+							<h6>第一行包含兩個整數a, b</h6>
+						</ul>
+						<p></p>
+						<h2>Output:</h2>
+						<ul>
+							<h6>參考範例輸出</h6>
+						</ul>
+						<a href="javascript:void(0);" onclick="toggleContent('2');">參考程式碼</a>
+						<div id="hiddenContent2" style="display: none;">
+							<script src="https://gist.github.com/92daniel/3aafdde15cdc3a6b750865e07d4ff581.js"></script>
+						</div>
+						<p></p>
+						<h2>範例輸出</h2>
+						<p><img src="assets/images/4-2.png" width="500"></p>
+					</div>
+					<div class = "dis" id="練習3">
+						<h1>練習3</h1>
+						<hr>
+						<h2>題目敘述:</h2>
+						<ul>
+							<h6>輸入a, b, c，解ax^2 + bx + c的x值</h6>
+						</ul>
+						<p></p>
+						<h2>Input:</h2>
+						<ul>
+							<h6>輸入三個變數a, b, c</h6>
+						</ul>
+						<p></p>
+						<h2>Output:</h2>
+						<ul>
+							<h6>參考範例輸出</h6>
+						</ul>
+						<a href="javascript:void(0);" onclick="toggleContent('3');">參考程式碼</a>
+						<div id="hiddenContent3" style="display: none;">
+							<script src="https://gist.github.com/92daniel/6489a8f3a686c06a0367f4d86c83a43e.js"></script>
+						</div>
+						<p></p>
+						<h2>範例輸出</h2>
+						<p><img src="assets/images/4-3-1.png" width="500"></p>
+						<p><img src="assets/images/4-3-2.png" width="500"></p>
+						<p><img src="assets/images/4-3-3.png" width="500"></p>
+					</div>
+					<div class = "dis" id="練習4">
+					<h1>練習4</h1>
+						<hr>
+						<a href="http://web.kshs.kh.edu.tw/academy/luckycat/homework/q10696.htm">題目位置</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="bg-light py-4 mt-auto">
+		<div class="container px-5">
+			<div class="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/09/25更新</div></div>
+				<div class="col-auto"><div class="small m-0 text-dark">- by hao</div></div>
+			</div>
+		</div>
+	</footer>
+</body>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</html>
