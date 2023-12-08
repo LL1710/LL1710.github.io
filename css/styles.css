@@ -185,4 +185,25 @@ p
 .left_navbar
 {
 	display: none;
+} 
+
+@media(max-width: 768px){
+  .dis img{
+		max-width: 100px;
+	}
+
+}
+
+
+@media(max-width: 767px){
+ .dis img{
+		max-width: 100px;
+	}
+}
+
+
+@media(max-width: 414px){
+	.dis img{
+		max-width: 100px;
+	}
 }
