@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Modern Business v5.0.7 (https://startbootstrap.com/template-overviews/modern-business)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-modern-business/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+::selection
+{
+  background: #EAEAEA;
+}
+
+div, h1
+{
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bold;
+  color: #3C3C3C;
+}
+
+li{
+  list-style: none;
+}
+
+a
+{
+  color: #3A4A7D;
+}
+
+a:hover
+{
+  color: #2A2A2A;
+}
+
+h2 
+{
+  font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link.special 
+{
+  color: #16537E; /* 更改為您想要的顏色 */
+  background: white;
+}
+
+.dis {
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.title_dis
+{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: : 60px;
+}
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 平移效果的動畫定義 */
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* 縮放效果的動畫定義 */
+@keyframes scaleIn {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/* 旋轉效果的動畫定義 */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 彈跳效果的動畫定義 */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+/* 滑動效果的動畫定義 */
+@keyframes slideDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top:70px;
+    grid-gap: : 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item{
+    margin: 16px 0;
+  }
+
+  .nav-menu.active{
+    left:  0;
+  }
+}

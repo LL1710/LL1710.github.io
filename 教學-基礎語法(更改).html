@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>IC 測試</title>
+	<!-- 裝置畫面更動 -->
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<!-- title圖片 -->
+	<link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
+	<!-- jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<!-- 我的css -->
+	<link rel="stylesheet" href="css/styles2.css" >
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container text-center">
+      <a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <img src="assets/images/8201371_menu_list_order_ui_checklist_icon.png" alt="Logo" width="37" height="37">
+      </a>
+      <a href="#" class="navbar-brand">專題製作</a>
+      <ul class = "navbar-nav me-auto">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a class="nav-link active" href="解題記錄.html">解題記錄</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#基本架構">基本架構</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#輸入輸出">輸入輸出</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#運算子">運算子</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#選擇結構">選擇結構</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#練習1">練習1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#練習2">練習2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#練習3">練習3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link special animated-text" href="#練習4">練習4</a>
+            </li>
+        </ul>
+      </ul>
+      <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">章節</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+      <li><a class="dropdown-item" href="教學-編譯器.html">第0次課程-教學</a></li>
+      <li><a class="dropdown-item" href="教學-基礎語法.html">第1次課程-基礎語法</a></li>
+      <li><a class="dropdown-item" href="教學-基礎語法2.html">第2次課程-迴圈</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 fade-in-out">
+        <div id="基本架構">
+          <div class="title_dis">
+            <h1>基本架構</h1>
+            <hr>
+          </div>
+          <script src="https://gist.github.com/92daniel/6cbd46e4beefee12ffb6f2e184fe1431.js"></script>
+          <h6>C++ 必備以下兩點</h6>
+          <ul>
+            <li>標頭黨 : #include開頭的都是標頭黨，上面的iostream是標準輸入輸出的標頭黨，之後還會有更多的標頭黨需要學習</li>
+            <p></p>
+            <li>主函式 : main下方的大括號區間是我們編寫程式碼的位置</li>
+          </ul>
+        </div>
+        <div class = "dis" id="資料型態">
+          <h1>資料型態</h1>
+          <hr>
+          <h6>常見的幾種資料型態</h6>
+          <h6>數字</h6>
+          <ul>
+            <li>int : 整數(不包含小數點)範圍等於-2的31次方 ~ 2的31次方-1</li>
+            <p></p>
+            <li>double : 雙精度浮點數範圍±1.7E-308 和 ±1.7E308之間，意思就是有包含小數點的整數</li>
+            <p></p>
+            <li>long long : 超長整數(不包含小數點)範圍等於-2的63次方 ~ 2的63次方-1</li>
+          </ul>
+          <h6>符號</h6>
+          <ul>
+            <li>char : 字元或字串</li>
+            <p></p>
+            <li>string : 字串</li>
+          </ul>
+          <h6>布林值</h6>
+          <ul>
+            <li>bool : true或false</li>
+          </ul>
+        </div>
+        <div class = "dis" id="輸入輸出">
+          <h1>輸入輸出</h1>
+          <hr>
+          <h6>常見的兩種輸入可混搭</h6>
+          <ul>
+            <li>scanf語法 : scanf("<mark style="background-color: yellow;">資料型態</mark>", &<mark style="background-color: yellow;">變數名稱</mark>)&#59;，以下是資料型態對應</li>
+            <ul>
+              <li>int : %d</li>
+              <li>double : %lf</li>
+              <li>long long : %lld</li>
+              <li>char : %c 或 %s</li>
+              <li>string : 不能用scanf</li>
+            </ul>
+            <p></p>
+            <li>cin語法 : cin &gt;&gt; <mark style="background-color: yellow;">變數名稱</mark>&#59;</li>
+          </ul>
+          <h6>常見的兩種輸出</h6>
+          <ul>
+            <li>printf語法 : printf("<mark style="background-color: yellow;">資料型態</mark>", <mark style="background-color: yellow;">變數名稱</mark>)&#59;</li>
+            <p></p>
+            <li>cout語法 : cout &lt;&lt; <mark style="background-color: yellow;">變數名稱</mark>&#59;</li>
+          </ul>
+          <h6>兩種輸出的換行</h6>
+          <ul>
+            <li>printf("\n");</li>
+            <p></p>
+            <li>cout &lt;&lt; endl; 或者是 cout &lt;&lt; "\n";</li>
+          </ul>
+        </div>
+        <div class = "dis" id="範例1">
+          <h1>範例1 - 輸入數字a 輸出數字a</h1>
+          <script src="https://gist.github.com/92daniel/7c10f3093e0f4f8f4b42658439fb7eb1.js"></script>
+        </div>
+        <div class = "dis" id="運算子">
+          <h1>運算子</h1>
+          <hr>
+          <h6>常見的幾種運算子</h6>
+          <ul>
+            <li>+ 加</li>
+            <li>- 減</li>
+            <li>* 乘</li>
+            <li>/ 除</li>
+            <li>&gt; 大於</li>
+            <li>&gt;= 大於等於</li>
+            <li>&lt; 小於</li>
+            <li>&lt;= 小於等於</li>
+            <li>== 判斷是否相同時要兩個"="，如果只是給值只需要一個</li>
+            <li>++運算子分兩種，但結果都是+=1</li>
+            <ul>
+              <li>++i 先++在做運算</li>
+              <li>i++ 先運算在++</li>
+            </ul>
+          </ul>
+        </div>
+        <div class = "dis" id="選擇結構">
+          <h1>選擇結構</h1>
+          <hr>
+          <h6>if語法 : if(<mark style="background-color: yellow;">判斷的內容</mark>)</h6>
+          <h1>範例2 - 判斷數字大小</h1>
+          <script src="https://gist.github.com/92daniel/96e58d9c3ad801672f59be5b89085709.js"></script>
+          <h1>對比範例2 - 判斷數字大小</h1>
+          <script src="https://gist.github.com/92daniel/9339cf7ec54476accbe88ffa525d4ac2.js"></script>
+          <h6>switch可以被if取代這裡不教</h6>
+        </div>
+        <div class = "dis" id="練習1">
+          <h1>練習1 - Hello world!</h1>
+          <hr>
+          <h2>題目敘述:</h2>
+          <h6>嘗試自己印出Hello world!</h6>
+          <a href="javascript:void(0);" onclick="toggleContent('1');">參考程式碼</a>
+          <div id="hiddenContent1" style="display: none;">
+            <script src="https://gist.github.com/92daniel/fc879e0db284819ab9119f1579f58fe2.js"></script>
+          </div>
+          <p></p>
+          <h2>範例輸出</h2>
+          <p><img src="assets/images/1-1.png" width="500"></p>
+        </div>
+        <div class = "dis" id="練習2">
+          <h1>練習2 - 分數分級</h1>
+          <hr>
+          <h2>題目敘述:</h2>
+          <h6>輸入一個數字後輸出他的分數級</h6>
+          <p></p>
+          <h2>Input:</h2>
+          <h6>第一行包含一個數字a表示分數</h6>
+          <p></p>
+          <h2>Output:</h2>
+          <h6>第一行包含一個字元c表示分級，以下是對應的分級</h6>
+          <ul>
+            <li>80 ~ 100 : A</li>
+            <li>70 ~ 79 : B</li>
+            <li>60 ~ 69 : C</li>
+            <li>0 ~ 59 : F</li>
+            <li>大於100或小於0 : Error</li>
+          </ul>
+          <a href="javascript:void(0);" onclick="toggleContent('2');">參考程式碼</a>
+          <div id="hiddenContent2" style="display: none;">
+            <script src="https://gist.github.com/92daniel/0316d98758beafea52248619ede37d7a.js"></script>
+          </div>
+          <p></p>
+          <h2>範例輸出</h2>
+          <p><img src="assets/images/1-2.png" width="500"></p>
+        </div>
+        <div class = "dis" id="練習3">
+          <h1>練習3 - 時分秒</h1>
+          <hr>
+          <h2>題目敘述:</h2>
+          <h6>輸入一個數字秒後輸出他時分秒</h6>
+          <p></p>
+          <h2>Input:</h2>
+          <h6>第一行包含一個數字a表示秒</h6>
+          <p></p>
+          <h2>Output:</h2>
+          <h6>第一行包含一個字串由':'分割時分秒</h6>
+          <a href="javascript:void(0);" onclick="toggleContent('3');">參考程式碼</a>
+          <div id="hiddenContent3" style="display: none;">
+            <script src="https://gist.github.com/92daniel/cd7c7ede9cba8cdb193ac7c67cf4bbc3.js"></script>
+          </div>
+          <p></p>
+          <h2>範例輸出</h2>
+          <p><img src="assets/images/1-3.png" width="500"></p>
+        </div>
+        <div class = "dis" id="練習4">
+          <h1>練習4</h1>
+          <hr>
+          <h2>題目敘述:</h2>
+          <h6>輸入一個數字a範圍 0 ~ 999，判斷是否是3的倍數、並且每個位數不能是0以外的偶數</h6>
+          <p></p>
+          <h2>Input:</h2>
+          <h6>第一行包含一個數字a範圍 0 ~ 999</h6>
+          <p></p>
+          <h2>Output:</h2>
+          <h6>如果符合題意輸出"YES"否則"NO"</h6>
+          <a href="javascript:void(0);" onclick="toggleContent('4');">參考程式碼</a>
+          <div id="hiddenContent4" style="display: none;">
+            <script src="https://gist.github.com/92daniel/43bb9d4fd89658ac49d434f45cd16903.js"></script>
+          </div>
+          <p></p>
+          <h2>範例輸出</h2>
+          <p><img src="assets/images/1-4.png" width="500"></p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <footer class="bg-light py-4 mt-auto">
+    <div class="container px-5">
+      <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+        <div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/09/25更新</div></div>
+        <div class="col-auto"><div class="small m-0 text-dark">- by hao</div></div>
+      </div>
+    </div>
+  </footer>
+</body>
+	<script src="js/scripts.js"></script>
+</html>
