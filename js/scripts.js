@@ -13,18 +13,7 @@ function scrollToTop() {
 document.addEventListener("DOMContentLoaded", function () {
   const animatedTextElements = document.querySelectorAll(".animated-text");
   const navbar = document.querySelector(".left_navbar");
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-  })
-
-  document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", ()=> {
-    hamburger.classList.remove("active")
-    navMenu.classList.remove("active")
-  }))
 
   setTimeout(function () {
     navbar.style.display = "block"; // 這裡改變display屬性以顯示導航欄
@@ -62,18 +51,5 @@ function toggleContent(id) {
         content.style.display = 'none';
     }
 }
-
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-})
-
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", ()=> {
-  hamburger.classList.remove("active")
-  navMenu.classList.remove("active")
-}))
 
 
