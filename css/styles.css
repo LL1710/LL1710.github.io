@@ -191,7 +191,6 @@ p
 	display: none;
 } 
 
-
 @media(max-width: 930px){
   .title_dis img {
   	max-width: 750px;
@@ -216,7 +215,6 @@ p
 	margin: 0 1;
 		
   }
-
 }
 
 

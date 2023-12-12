@@ -64,20 +64,24 @@ h2
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  
 }
 
-.nav-menu{
+/*.nav-menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
   grid-gap: : 60px;
-}
+}*/
 
 .nav-link{
   transition: 0.7s ease;
 }
 
-
+.left_navbar
+{
+  display: none;
+} 
 
 .hamburger{
     display: none;
@@ -129,6 +133,40 @@ h2
   100% { transform: translateY(0); }
 }
 
+/* 應用動畫效果的元素的初始狀態 */
+.fade-in-out {
+  opacity: 0;
+  animation: fadeInOut 3s ease forwards;
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 2s ease forwards;
+}
+
+.scale-in {
+  transform: scale(0);
+  animation: scaleIn 2s ease forwards;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+
+.slide-down {
+  transform: translateY(-100%);
+  animation: slideDown 1s ease forwards;
+}
+
+.left_navbar {
+  background:color: white;
+}
+
+
 @media (max-width: 768px) {
   .hamburger{
     display: block;
@@ -154,7 +192,7 @@ h2
     transition: 0.3s;
   }
   .nav-item{
-    margin: 16px 0;
+    margin: 5px 0;
   }
 
   .nav-menu.active{
