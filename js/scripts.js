@@ -13,7 +13,7 @@ function scrollToTop() {
 document.addEventListener("DOMContentLoaded", function () {
   const animatedTextElements = document.querySelectorAll(".animated-text");
   const navbar = document.querySelector(".left_navbar");
-
+  
 
   setTimeout(function () {
     navbar.style.display = "block"; // 這裡改變display屬性以顯示導航欄
