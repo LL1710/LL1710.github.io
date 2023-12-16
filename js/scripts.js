@@ -13,8 +13,6 @@ function scrollToTop() {
 document.addEventListener("DOMContentLoaded", function () {
   const animatedTextElements = document.querySelectorAll(".animated-text");
   const navbar = document.querySelector(".left_navbar");
-  
-
   setTimeout(function () {
     navbar.style.display = "block"; // 這裡改變display屬性以顯示導航欄
   }, 10); // 5000毫秒等於5秒
@@ -32,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	  element.style.transform = "translateX(0)";
 	}
   }
+
+
   
   // 調用函數：給導航項目添加動畫效果
   animateText();
@@ -51,5 +51,7 @@ function toggleContent(id) {
         content.style.display = 'none';
     }
 }
+
+
 
 

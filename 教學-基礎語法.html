@@ -19,10 +19,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script
 	<!-- 我的css -->
 	<link rel="stylesheet" href="css/styles.css" >
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(){
+			
+			el_autohide = document.querySelector('.autohide');
+			
+			// add padding-top to bady (if necessary)
+			navbar_height = document.querySelector('.navbar').offsetHeight;
+			document.body.style.paddingTop = navbar_height + 'px';
+
+			if(el_autohide){
+				
+				var last_scroll_top = 0;
+				window.addEventListener('scroll', function() {
+		       		let scroll_top = window.scrollY;
+			       if(scroll_top < last_scroll_top) {
+			            el_autohide.classList.remove('scrolled-down');
+			            el_autohide.classList.add('scrolled-up');
+			        }
+			        else {
+			            el_autohide.classList.remove('scrolled-up');
+			            el_autohide.classList.add('scrolled-down');
+			        }
+			        last_scroll_top = scroll_top;
+
+				}); 
+			}	
+		}); 
+	</script>
 </head>
 <body>
 	<div class="container">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="autohide navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container text-center">
 			<a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 				<img src="assets/images/8201371_menu_list_order_ui_checklist_icon.png" alt="Logo" width="37" height="37">
