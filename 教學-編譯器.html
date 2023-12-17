@@ -87,7 +87,156 @@
 			<p><img src="assets/images/4.png" ></p>
 			<p>如過還要安裝其他類的，打開 Visual Studio Installer 點選 Modify 即可</p>
 		</div>
-		
+
+		<div class="dis">
+			<p><h1>步驟一</h1></p>
+			<hr>
+			<h6>先建立新的專案</h6>
+			<p><img src="assets/images/image1.png"></p>
+			<h6>尋找CLR 點擊 CLR空白專案</h6>
+			<p><img src="assets/images/image2.png" ></p>
+		</div>
+
+		<div class="dis">
+			<p><h1>屬性</h1></p>
+			<hr>
+			<h6>右鍵點擊Project然後看到最低點選屬性</h6>
+			<p><img src="assets/images/image3.png"></p>
+		</div>
+
+		<div class="dis">
+			<h6>點選連接器點擊系統尋找子系統點選 Windows (/SUBSYSTEM:WINDOWS)</h6>
+			<p><img src="assets/images/image4.png"></p>
+			<h6>下一個點擊進階尋找進入點寫Main 然後點擊 OK</h6>
+			<p><img src="assets/images/image5.png" ></p>
+		</div>
+
+		<div class="dis">
+			<p><h1>Part 2 步驟二</h1></p>
+			<hr>
+			<h6>右鍵點選 Project 1<br>
+				點加入新增項目</h6>
+			<p><img src="assets/images/image6.png"></p>
+		</div>
+
+		<div class="dis">
+			<h6>在Visual C++ 找 CLR 選Window Form<br>
+				然後按新增
+			</h6>
+			<p><img src="assets/images/image7.png"></p>
+		</div>
+
+		<div class="dis">
+			<h6>顯示錯誤</h6>
+			<code>
+				#include "MyForm.h"
+				using namespace System;
+				using namespace System::Windows::Forms;
+
+				Void Main(array<String^>^ args) {
+				Application::EnableVisualStyles();
+				Application::SetCompatibleTextRenderingDefault(false);
+				Project1::MyForm form;
+				Application::Run(% form);
+				};
+
+			</code>
+			<p><img src="assets/images/image8.png"></p>
+		</div>
+
+		<div class="dis">
+			<h6>顯示錯誤</h6>
+			<code>
+				<pre>
+				#include "MyForm.h"
+				using namespace System;
+				using namespace System::Windows::Forms;
+
+				Void Main(array<String^>^ args) {
+				Application::EnableVisualStyles();
+				Application::SetCompatibleTextRenderingDefault(false);
+				Project1::MyForm form;
+				Application::Run(% form);
+				};
+				</pre>
+			</code>
+			<p><img src="assets/images/image8.png"></p>
+		</div>
+		<div class="dis">
+			<p><img src="assets/images/image9.png"></p>
+		</div>
+
+		<div class="dis">
+			<h6>Code 程式代碼</h6>
+			<code>
+				<pre>
+				private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+				int num3;
+				float num1, num2;
+				bool result1, result2;
+
+				num1 = Convert::ToSingle(textBox1->Text);
+
+				num2 = Convert::ToSingle(textBox2->Text);
+
+
+				textBox3->Text = "";
+				labelMsg->Text = "";
+				if (textComb1->Text == "+")
+				{
+				num3 = 1;
+				}
+				if (textComb1->Text == "-")
+				{
+				num3 = 2;
+				}
+				if (textComb1->Text == "*")
+				{
+				num3 = 3;
+				}
+				if (textComb1->Text == "/")
+				{
+				num3 = 4;
+				}
+				switch (num3)
+				{
+
+
+				case 1:
+				textBox3->Text = Convert::ToString(num1 + num2);
+				break;
+				case 2:
+				textBox3->Text = Convert::ToString(num1 - num2);
+				break;
+				case 3:
+				textBox3->Text = Convert::ToString(num1 * num2);
+				break;
+				case 4:
+				textBox3->Text = Convert::ToString(num1 / num2);
+				default:
+				labelMsg->Text = "運算子線輸入:+-*/";
+				break;
+				}
+				}
+				</pre>
+			</code>
+		</div>
+
+		<div class="dis">
+			<h6>ComboBox</h6>
+			<code>
+				<pre>
+				private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+				textComb1->Items->Add("+");
+				textComb1->Items->Add("-");
+				textComb1->Items->Add("*");
+				textComb1->Items->Add("/");
+				}
+				</pre>
+			</code>
+			<p><img src="assets/images/image10.png"></p>
+		</div>
+
 		<div class="dis">
 			<h1>Dev-C++ 安裝c++17</h1>
 			<hr>
