@@ -224,6 +224,60 @@
 
 		<div class="dis">
 			<h6>ComboBox</h6>
+			<h6>
+				<pre>
+				1.Visual C++
+				2.Windows Desktop
+				3.Window傳統式精靈精靈
+				</pre>
+			</h6>
+			<p><img src="assets/images/image11.png"></p>
+			<p><img src="assets/images/image12.png"></p>
+			<h6>將這段code貼入dllmain.cpp code(註解)</h6>
+			<code>
+				<pre>
+					// dllmain.cpp : Defines the entry point for the DLL application.
+					#include "framework.h"
+					#define DLLMAIN_API __declspec(dllexport)
+ 					DWORD ul_reason_for_call,
+					extern "C" DLLMAIN_API void helloWorldFun()
+					{
+					 MessageBoxW(0, L"此函式呼叫成功", L"helloWorldFun", 0);
+					}
+
+					BOOL APIENTRY DllMain(HMODULE hModule,
+
+					 LPVOID lpReserved
+					)
+					{
+					 switch (ul_reason_for_call)
+					 {
+					 case DLL_PROCESS_ATTACH:
+					  MessageBox(0, L"程序建立時被呼叫", L"DllMain", 0);
+					  break;
+					 case DLL_THREAD_ATTACH:
+					  MessageBox(0, L"執行緒建立時被呼叫", L"DllMain", 0);
+					  break;
+					 case DLL_THREAD_DETACH:
+					  MessageBox(0, L"執行緒退出時被呼叫", L"DllMain", 0);
+					  break;
+					 case DLL_PROCESS_DETACH:
+					  MessageBox(0, L"程序退出時被呼叫", L"DllMain", 0);
+					  break;
+					 }
+					 return TRUE;
+					}
+				</pre>
+			</code>
+			<h6>點擊功能選單  1.建置 →2. 建置方案，可在 Output 視窗看到下方提示，會在專案下的 Debug 目錄產出 dll 檔案，檔名與專案名稱相同</h6>
+			<p><img src="assets/images/image13.png"></p>
+			<h6>到儲存的地方尋找剛剛製作出的 DllTest.</h6>
+			<p><img src="assets/images/image14.png"></p>
+		</div>
+
+
+		<div class="dis">
+			<h6>DLL製作</h6>
 			<code>
 				<pre>
 				private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
