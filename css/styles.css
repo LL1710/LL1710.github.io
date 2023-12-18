@@ -356,7 +356,8 @@ p
 	 .title_dis img {
   		max-width:  390px;
   		margin: 0 1;
-  }
+  	}
+
  	.dis img{
 		max-width: 390px;
 		margin: 0 1;
@@ -367,14 +368,14 @@ p
  	position: absolute;
   	visibility: hidden;
   }
-}
 
+}
 
 @media(max-width: 414px){
 	.title_dis img {
   		max-width: 360px;
   		margin: 0 1;
-  }
+  	}
 	.dis img{
 		max-width: 360px;
 		margin: 0 1;

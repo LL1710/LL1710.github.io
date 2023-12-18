@@ -53,11 +53,11 @@
 	<header>
 	<nav class="autohide navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<div class="container text-center">
-			<a class="navbar-brand" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+			<a class="navbar-brand" data-bs-toggle="offcanvas"  href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 				<img src="assets/images/8201371_menu_list_order_ui_checklist_icon.png" alt="Logo" width="37" height="37">
 			</a>
 			<!-- logo -->
-			<a class="navbar-brand" href="#">專題製作</a>
+			<a class="navbar-brand">專題製作</a>
 		
 			<!-- 手機版 -->
 		 	<button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-controls="linkbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,23 +72,34 @@
 					<li class="nav-item">
 						<a class="nav-link active" href="解題記錄.html">解題記錄</a>
 					</li>
-					<li class="nav-item">
+<!-- 				<li class="nav-item">
 						<a class="nav-link active" href="教學-編譯器.html">教學</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link special animated-text" href="#下載教學">下載教學</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">標籤</a>
+						<a class="nav-link special animated-text" href="#如何去安裝">如何去安裝</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link special animated-text" href="#步驟一">步驟一</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link special animated-text" href="#屬性">屬性</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link special animated-text" href="#步驟二">步驟二</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
-	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+	<div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 	  <div class="offcanvas-header">
 		<h5 class="offcanvas-title" id="offcanvasExampleLabel">章節</h5>
 		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	  </div>
-	  <div class="offcanvas-body">
 		  <ul class="navbar-nav">
 			<li><a class="dropdown-item" href="教學-編譯器.html">第0次課程-編譯器</a></li>
 			<li><a class="dropdown-item" href="教學-基礎語法.html">第1次課程-基礎語法</a></li>
@@ -103,14 +114,14 @@
 			<img src="assets/images/dev.png">
 		</div>
 		
-		<div class="dis">
+		<div class="dis" id="下載教學">
 			<p><h1>下載教學</h1></p>
 			<hr>
 			<h6>Visual Studio Download 	下載鏈接: <a href="https://visualstudio.microsoft.com/downloads/">點擊下載</a></h6>
 			<p><img src="assets/images/second.png"></p>
 		</div>
 		
-		<div class="dis">
+		<div class="dis" id="如何去安裝">
 			<p><h1>如何去安裝？</h1></p>
 			<hr>
 			<h6>打開 Visual Studio Installer</h6>
@@ -120,8 +131,8 @@
 			<p>如過還要安裝其他類的，打開 Visual Studio Installer 點選 Modify 即可</p>
 		</div>
 
-		<div class="dis">
-			<p><h1>步驟一</h1></p>
+		<div class="dis" id="步驟一">
+			<p><h1>步驟 一 Part 1</h1></p>
 			<hr>
 			<h6>先建立新的專案</h6>
 			<p><img src="assets/images/image1.png"></p>
@@ -129,7 +140,7 @@
 			<p><img src="assets/images/image2.png" ></p>
 		</div>
 
-		<div class="dis">
+		<div class="dis" id="屬性">
 			<p><h1>屬性</h1></p>
 			<hr>
 			<h6>右鍵點擊Project然後看到最低點選屬性</h6>
@@ -143,8 +154,8 @@
 			<p><img src="assets/images/image5.png" ></p>
 		</div>
 
-		<div class="dis">
-			<p><h1>Part 2 步驟二</h1></p>
+		<div class="dis" id="步驟二">
+			<p><h1>Part 2 一 步驟二 </h1></p>
 			<hr>
 			<h6>右鍵點選 Project 1<br>
 				點加入新增項目</h6>
@@ -326,7 +337,7 @@
 		<div class="container px-5">
 			<div class="row align-items-center justify-content-between flex-column flex-sm-row">
 				<div class="col-auto"><div class="small m-0 text-dark">CHUCS &copy; 2023/09/10更新</div></div>
-				<div class="col-auto"><div class="small m-0 text-dark"> By 張家榮 & 劉偉駿 （test）</div></div>
+				<div class="col-auto"><div class="small m-0 text-dark"> By 張家榮 & 劉偉駿 </div></div>
 			</div>
 		</div>
 	</footer>
